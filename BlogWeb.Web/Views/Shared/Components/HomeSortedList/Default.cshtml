@@ -1,0 +1,16 @@
+﻿@using BlogWeb.Entity.Entities;
+@model List<Article>
+
+
+
+<div class="content">
+    <ul>
+
+        @foreach (var article in Model)
+        {
+@*             <li><a asp-controller="Home" asp-action="Index" asp-route-categoryId="@article.Id">- @article.Title</a></li>
+ *@            <li><a href="/Home/Search?Keyword=@article.Title.ToLower()">- @article.Title</a></li>
+
+        }
+    </ul>
+</div>
